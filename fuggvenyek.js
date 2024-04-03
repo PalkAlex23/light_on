@@ -38,6 +38,7 @@ export function kibekapcsolas(lista) {
   ELEMEK.on("click", function (event) {
     console.log($(event.target));
     let i = event.target.id;
+
     if (lista[i] === 1) {
       lista[i] = 0;
     } else {
@@ -69,8 +70,9 @@ export function mindenLekapcsolva(lista) {
 export function ujJatek() {
   const GOMBELEM = $("button");
   GOMBELEM.on("click", function () {
-    kiIr(htmlLetrehoz(listaTarolasEsGeneralas()));
-    kibekapcsolas(lista);
-    mindenLekapcsolva(lista);
+    let LISTA = listaTarolasEsGeneralas();
+    kiIr(htmlLetrehoz(LISTA));
+    mindenLekapcsolva(LISTA);
+    kibekapcsolas(LISTA);
   });
 }

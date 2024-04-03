@@ -2,5 +2,6 @@ import { htmlLetrehoz, kiIr, kibekapcsolas, listaTarolasEsGeneralas, mindenLekap
 
 let LISTA = listaTarolasEsGeneralas();
 kiIr(htmlLetrehoz(LISTA));
+mindenLekapcsolva(LISTA);
 kibekapcsolas(LISTA);
 ujJatek();
